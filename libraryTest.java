@@ -15,4 +15,17 @@ public class LibraryTest {
         assert(library.getBook().contains(book));
     }
 
+    public void test_borrow_book(){
+        library.addBook(book);
+        assertTrue(Library.borrowBook("978-8171673400"));
+        assertTrue(book.borrowBooks());
+    }
+
+    public void test_borrow_book_not_Available(){
+        library.addBook(book);
+        library.borrowBook("978-8171673400");
+        library.borrowBook("4638756386");
+
+    }
+
 }
