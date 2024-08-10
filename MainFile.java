@@ -5,7 +5,11 @@ public class MainFile {
         LibraryTest test=new LibraryTest();
         test.add();
         test.test_add_book();
-        System.out.println("Test passed");
 
+        test.test_borrow_book();
+        test.test_borrow_book_not_Available();
+        System.out.println("Test Passed");
     }
 }
+
+
