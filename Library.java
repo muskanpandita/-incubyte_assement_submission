@@ -32,4 +32,18 @@ public class Library {
         }
         return false;
 }
+
+public void returnBook(String ISBN){
+    for(Book book:books){
+        if(book.getISBN().equals(ISBN)){
+            if(book.borrowBooks()){
+                book.setBorrowed(false);
+                return;
+            }
+            else{
+                System.out.println("Sorry, Book was not borrowed");
+            }
+        }
+    }
+}
 }
