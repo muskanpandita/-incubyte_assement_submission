@@ -26,7 +26,7 @@ public String getAuthor(){
     return author;
 }
 
-public int getPublicationString(){
+public int getPublicationYear(){
     return publicationYear;
 }
 
