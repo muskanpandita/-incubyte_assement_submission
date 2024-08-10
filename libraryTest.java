@@ -27,5 +27,12 @@ public class LibraryTest {
         library.borrowBooks("4638756386");
 
     }
+
+    public void test_return_book(){
+        library.addBook(book);
+        library.borrowBooks("978-8171673400");
+        library.returnBooks("978-8171673400");
+        assert(book.borrowBooks());
+    }
 }
 
