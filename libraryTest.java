@@ -31,7 +31,7 @@ public class LibraryTest {
     public void test_return_book(){
         library.addBook(book);
         library.borrowBooks("978-8171673400");
-        library.returnBooks("978-8171673400");
+        library.returnBook("978-8171673400");
         assert(book.borrowBooks());
     }
 }
