@@ -17,4 +17,19 @@ public class Library {
     public List<Book> getBook(){
         return new ArrayList<>(books);
     }
+
+    public boolean borrowBooks(String ISBN){
+        for(Book book :  books){
+            if(book.getISBN().equals(ISBN)){
+                if(!book.borrowBooks()){
+                    book.setBorrowed(true);
+                    return true;
+                }
+                else{
+                    System.out.println("Book is already Borrowed");
+                }
+            }
+        }
+        return false;
+}
 }
