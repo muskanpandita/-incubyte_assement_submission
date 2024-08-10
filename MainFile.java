@@ -8,8 +8,12 @@ public class MainFile {
 
         test.test_borrow_book();
         test.test_borrow_book_not_Available();
+ 
+        test.test_return_book();
         System.out.println("Test Passed");
     }
 }
+
+
 
 
