@@ -11,9 +11,8 @@ public class MainFile {
  
         test.test_return_book();
         System.out.println("Test Passed");
+
+        test.test_view_avaliable_books();
     }
 }
-
-
-
 
