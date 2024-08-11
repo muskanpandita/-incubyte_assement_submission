@@ -34,5 +34,17 @@ public class LibraryTest {
         library.returnBook("978-8171673400");
         assert(book.borrowBooks());
     }
+
+    public void test_view_avaliable_books(){
+        library.addBook(book);
+        Book book1=new Book("978-8126706350","Kamayani","Jaishankar Prasad",1936);
+        library.addBook(book1);
+
+        List<Book> availableBooks= library.view_available_books();
+        assert availableBooks.size()== 2;
+        assert availableBooks.get(0).getTitle().equals("Godaan");
+        assert availableBooks.get(1).getTitle().equals("Kamayani");
+        
+    }
 }
 
