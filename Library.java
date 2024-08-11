@@ -46,4 +46,14 @@ public void returnBook(String ISBN){
         }
     }
 }
+
+    public List<Book> view_available_books(){
+        List<Book> availableBooks = new ArrayList<>();
+        for(Book book : books){
+            if(!book.borrowBooks()){
+                availableBooks.add(book);
+            }
+}
+    return availableBooks;
+}
 }
